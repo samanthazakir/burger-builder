@@ -2,6 +2,7 @@
 // joi user theke input validation kore, eta mongoose er validation theke easier, cleaner, joi is recommended, database level er validation mongoose die possible
 //Connect MongoDB
 //Run Server
+//loadash array obj er bibhinno function use kore
 const dotenv = require('dotenv');
 dotenv.config();
 const mongoose =require('mongoose');
@@ -9,8 +10,9 @@ const app = require('./app');
 
 mongoose.connect(process.env.MONGODB_SERVER, {
     useNewUrlParser: true,
+    useFindAndModify: false,
     useUnifiedTopology: true,
-    useCreatedIndex: true
+    useCreateIndex: true
 })
     .then(() => console.log("connected to mongodb"))
     .catch(err => console.log("mongogb connection failed"));
