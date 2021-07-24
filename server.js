@@ -1,5 +1,5 @@
 // dotennv, express, morgan, bcrypt, jsonwebtoken, joi, lodash, cors
-
+// joi user theke input validation kore, eta mongoose er validation theke easier, cleaner, joi is recommended, database level er validation mongoose die possible
 //Connect MongoDB
 //Run Server
 const dotenv = require('dotenv');
